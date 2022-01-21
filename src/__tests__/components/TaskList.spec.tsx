@@ -1,6 +1,8 @@
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+
+import { render, screen, fireEvent, waitFor } from '@testing-library/react'
 import React from 'react';
 import { TaskList } from '../../components/TaskList';
+import '@testing-library/jest-dom';
 
 describe('App Page', () => {
   it('should be able to add a task', async () => {
