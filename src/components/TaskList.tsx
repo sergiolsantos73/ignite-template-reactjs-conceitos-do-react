@@ -15,9 +15,9 @@ export function TaskList() {
   const [newTaskTitle, setNewTaskTitle] = useState('');
 
   function handleCreateNewTask() {
-    if (newTaskTitle === '') {
-      alert('Informe a task');
-    } else {
+    if (newTaskTitle !== '') {
+    //   window.alert('Informe a task');
+    // } else {
       const task = {
         id: Math.floor(Math.random() * 1000000),
         title: newTaskTitle,
@@ -41,7 +41,7 @@ export function TaskList() {
   }
 
   function handleRemoveTask(id: number) {
-
+/*
     let delTask = tasks.findIndex(task => task.id === id);
     if (delTask >= 0) {
       let taskList = tasks;
@@ -50,16 +50,16 @@ export function TaskList() {
         isComplete: true
       }
       setTasks([...taskList]);
-    }
+    }*/
 
-/*    const tasklist = [...tasks];
+    const tasklist = [...tasks];
 
     tasklist.map(task => {
       if(task.id === id){
         tasklist.splice(tasklist.indexOf(task),1);
       }
     });
-    setTasks(tasklist);*/
+    setTasks(tasklist);
   }
 
   return (
